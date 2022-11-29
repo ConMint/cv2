@@ -1,6 +1,7 @@
 import React from 'react';
+import '../CSS/Field.css';
 
-class Car extends React.Component {
+class Field extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -8,27 +9,30 @@ class Car extends React.Component {
       formName: this.props.title + 'Form',
     };
   }
-  changeText = (event) => {
-    this.setState({ text: event.target.value });
+  changeText = (e) => {
+    this.setState({ text: e.target.value });
   };
   submitAnswer = (e) => {
     e.preventDefault();
     document.getElementById(this.state.formName).style.display = 'none';
   };
+  editText = () => {
+    document.getElementById(this.state.formName).style.display = 'unset';
+  };
   render() {
     return (
-      <div>
+      <div className="generalInformation">
         <h1>{this.state.text}</h1>
+        <button onClick={this.editText}>Edit</button>
         <form id={this.state.formName} onSubmit={this.submitAnswer}>
           <label>
-            {this.props.title + ':'}
             <input type="text" onChange={this.changeText}></input>
           </label>
-          <input type="submit" value="submit"></input>
+          <input type="submit" value="Submit"></input>
         </form>
       </div>
     );
   }
 }
 
-export default Car;
+export default Field;
