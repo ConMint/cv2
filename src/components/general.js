@@ -1,14 +1,14 @@
 import React from 'react';
-import Field from './field';
+// import Field from './field';
+import GenField from './generalField';
 
 class GeneralInfo extends React.Component {
   render() {
     return (
       <div>
-        General Information
-        <Field className="fields" title="Name" />
-        <Field className="fields" title="Email" />
-        <Field className="fields" title="Phone number" />
+        <GenField className="fields" title="Name" />
+        <GenField className="fields" title="Email" />
+        <GenField className="fields" title="Phone number" />
       </div>
     );
   }

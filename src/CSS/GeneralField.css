@@ -1,0 +1,14 @@
+.generalInformation {
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: row;
+}
+
+#editButton {
+    width: 1vh;
+}
+
+.inputText {
+    min-width: 100px;
+    margin: 0;
+}

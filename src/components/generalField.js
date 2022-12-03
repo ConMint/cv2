@@ -1,7 +1,7 @@
 import React from 'react';
-import '../CSS/Field.css';
+import '../CSS/GeneralField.css';
 
-class Field extends React.Component {
+class GenField extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,6 +9,7 @@ class Field extends React.Component {
       formName: this.props.title + 'Form',
     };
   }
+
   changeText = (e) => {
     this.setState({ text: e.target.value });
   };
@@ -26,18 +27,19 @@ class Field extends React.Component {
   render() {
     return (
       <div className="generalInformation">
-        <button onClick={this.removeItem}>a</button>
-        <h1>{this.state.text}</h1>
-        <button onClick={this.editText}>Edit</button>
+        {/* <button onClick={this.removeItem}>a</button> */}
+        <h3 className="inputText">{this.state.text}</h3>
+        <button id="editButton" onClick={this.editText}>
+          Edifghght
+        </button>
         <form id={this.state.formName} onSubmit={this.submitAnswer}>
           <label>
             <input type="text" onChange={this.changeText}></input>
           </label>
-          <input type="submit" value="Submit"></input>
         </form>
       </div>
     );
   }
 }
 
-export default Field;
+export default GenField;
