@@ -3,11 +3,13 @@ import EduForm from './EduForm';
 
 class EduInfo extends React.Component {
   state = {
+    counter: 0,
     users: [],
   };
   addUser = () => {
     this.setState({
-      users: [...this.state.users, <EduForm />],
+      users: [...this.state.users, <EduForm title={this.state.counter} />],
+      counter: this.state.counter + 1,
     });
   };
 
