@@ -1,5 +1,5 @@
 import React from 'react';
-import Field from './field';
+import EduForm from './EduForm';
 
 class EduInfo extends React.Component {
   state = {
@@ -7,7 +7,7 @@ class EduInfo extends React.Component {
   };
   addUser = () => {
     this.setState({
-      users: [...this.state.users, <Field />],
+      users: [...this.state.users, <EduForm />],
     });
   };
 
@@ -16,6 +16,8 @@ class EduInfo extends React.Component {
       <div>
         <button onClick={this.addUser}>Add User</button>
         {this.state.users}
+        <EduForm title="strathy"></EduForm>
+        <EduForm title="JAHNSON"></EduForm>
       </div>
     );
   }
