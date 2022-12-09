@@ -8,8 +8,13 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="display">
-          <GeneralInfo />
-          <EduInfo />
+          <div className="general">
+            <GeneralInfo />
+          </div>
+          <div className="EduAndWork">
+            <EduInfo />
+            <EduInfo />
+          </div>
         </div>
       </div>
     );

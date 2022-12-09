@@ -14,7 +14,16 @@ body {
 }
 
 .display {
-    border: 2px solid pink;
     display: flex;
+    flex-direction: column;
 }
 
+.general {
+    display: flex;
+    border: 2px solid red;
+    width: 70vw
+}
+
+.EduAndWork {
+    display: flex;
+}

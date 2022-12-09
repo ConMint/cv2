@@ -1,5 +1,6 @@
 import React from 'react';
 import '../CSS/Field.css';
+import '../CSS/GeneralField.css';
 
 class EduForm extends React.Component {
   constructor(props) {
@@ -42,27 +43,48 @@ class EduForm extends React.Component {
 
   removeItem = (e) => {
     e.currentTarget.parentNode.remove();
+    document.getElementById(this.state.formName).remove();
   };
   render() {
     return (
-      <div className="generalInformation">
-        <button onClick={this.removeItem}>a</button>
-        <h3 className="inputText">{this.state.schoolName}</h3>
-        <h3 className="inputText">{this.state.degree}</h3>
-        <h3 className="inputText">{this.state.major}</h3>
-        <h3 className="inputText">{this.state.date}</h3>
-        <button id="editButton" onClick={this.editText}>
-          Edifghght
-        </button>
-        <form className={this.state.formName} onSubmit={this.submitAnswer}>
-          <label>
-            <input type="text" onChange={this.changeName}></input>
-            <input type="text" onChange={this.changeDegree}></input>
-            <input type="text" onChange={this.changeMajor}></input>
-            <input type="text" onChange={this.changeDate}></input>
-            <input type="submit" value="Submit"></input>
-          </label>
-        </form>
+      <div className="eduWorkInformation">
+        <div className="one">
+          <button onClick={this.removeItem}>a</button>
+          <h3 className="inputText">{this.state.schoolName}</h3>
+          <h3 className="inputText">{this.state.degree}</h3>
+          <h3 className="inputText">{this.state.major}</h3>
+          <h3 className="inputText">{this.state.date}</h3>
+          <button id="editButton" onClick={this.editText}>
+            Edit
+          </button>
+        </div>
+        <div className="two">
+          <form
+            className={this.state.formName}
+            id={this.state.formName}
+            onSubmit={this.submitAnswer}
+          >
+            <label>
+              <input
+                type="text"
+                placeholder="Name Of School"
+                onChange={this.changeName}
+              ></input>
+              <input
+                type="text"
+                placeholder="Degree Achieved"
+                onChange={this.changeDegree}
+              ></input>
+              <input
+                type="text"
+                placeholder="Major"
+                onChange={this.changeMajor}
+              ></input>
+              <input type="date" onChange={this.changeDate}></input>
+              <input type="submit" value="Submit"></input>
+            </label>
+          </form>
+        </div>
       </div>
     );
   }

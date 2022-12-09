@@ -1,5 +1,6 @@
 import React from 'react';
 import EduForm from './EduForm';
+import '../CSS/GeneralField.css';
 
 class EduInfo extends React.Component {
   state = {
@@ -15,11 +16,12 @@ class EduInfo extends React.Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.addUser}>Add User</button>
+      <div className="Education">
+        <button id="addBtn" onClick={this.addUser}>
+          Add User
+        </button>
         {this.state.users}
         <EduForm title="strathy"></EduForm>
-        <EduForm title="JAHNSON"></EduForm>
       </div>
     );
   }

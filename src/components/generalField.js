@@ -30,11 +30,15 @@ class GenField extends React.Component {
         {/* <button onClick={this.removeItem}>a</button> */}
         <h3 className="inputText">{this.state.text}</h3>
         <button id="editButton" onClick={this.editText}>
-          Edifghght
+          Edit
         </button>
         <form id={this.state.formName} onSubmit={this.submitAnswer}>
           <label>
-            <input type="text" onChange={this.changeText}></input>
+            <input
+              type="text"
+              placeholder={this.props.title}
+              onChange={this.changeText}
+            ></input>
           </label>
         </form>
       </div>
