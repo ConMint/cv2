@@ -1,6 +1,7 @@
 import React from 'react';
 import GeneralInfo from './components/general';
 import EduInfo from './components/education';
+import Work from './components/work';
 import './CSS/App.css';
 
 class App extends React.Component {
@@ -13,7 +14,7 @@ class App extends React.Component {
           </div>
           <div className="EduAndWork">
             <EduInfo />
-            <EduInfo />
+            <Work />
           </div>
         </div>
       </div>

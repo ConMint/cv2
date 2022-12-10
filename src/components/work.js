@@ -1,15 +1,15 @@
 import React from 'react';
-import EduForm from './EduForm';
+import WorkForm from './workForm';
 import '../CSS/GeneralField.css';
 
-class EduInfo extends React.Component {
+class Work extends React.Component {
   state = {
     counter: 0,
     users: [],
   };
   addUser = () => {
     this.setState({
-      users: [...this.state.users, <EduForm title={this.state.counter} />],
+      users: [...this.state.users, <WorkForm title={this.state.counter} />],
       counter: this.state.counter + 1,
     });
   };
@@ -18,13 +18,13 @@ class EduInfo extends React.Component {
     return (
       <div className="Education">
         <button id="addBtn" onClick={this.addUser}>
-          Add Education
+          Add Work
         </button>
         {this.state.users}
-        <EduForm title="Strathclyde University"></EduForm>
+        <WorkForm title="Company A"></WorkForm>
       </div>
     );
   }
 }
 
-export default EduInfo;
+export default Work;

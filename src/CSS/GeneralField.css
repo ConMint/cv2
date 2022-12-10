@@ -1,3 +1,7 @@
+body {
+    box-sizing: border-box;
+}
+
 .generalInformation {
     display: flex;
     flex-direction: row;
@@ -25,7 +29,8 @@
 #editButton {
     width: 6vh;
     height: 2vh;
-    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2px;
 }
 
 .inputText {
@@ -37,23 +42,25 @@
     
     display: flex;
     flex-direction: column;
-    border: 2px solid pink;
+    border: 2px solid black;
     margin-top: 20px
 }
 
 .Education {
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
+    border: 2px solid black;
     width: 100%;
     
 }
 
 #addBtn {
-    background-color: orange;
     width: 100%
 }
 
 .one {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
 }

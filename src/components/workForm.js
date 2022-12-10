@@ -2,26 +2,22 @@ import React from 'react';
 import '../CSS/Field.css';
 import '../CSS/GeneralField.css';
 
-class EduForm extends React.Component {
+class WorkForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      schoolName: this.props.title,
-      major: 'Major',
-      degree: 'Degree',
+      companyName: this.props.title,
+      role: 'Role',
       date: 'Date',
       formName: this.props.title + 'Form',
     };
   }
 
   changeName = (e) => {
-    this.setState({ schoolName: e.target.value });
+    this.setState({ companyName: e.target.value });
   };
-  changeMajor = (e) => {
-    this.setState({ major: e.target.value });
-  };
-  changeDegree = (e) => {
-    this.setState({ degree: e.target.value });
+  changeRole = (e) => {
+    this.setState({ role: e.target.value });
   };
   changeDate = (e) => {
     this.setState({ date: e.target.value });
@@ -49,9 +45,8 @@ class EduForm extends React.Component {
     return (
       <div className="eduWorkInformation">
         <div className="one">
-          <h3 className="inputText">{this.state.schoolName}</h3>
-          <h3 className="inputText">{this.state.degree}</h3>
-          <h3 className="inputText">{this.state.major}</h3>
+          <h3 className="inputText">{this.state.companyName}</h3>
+          <h3 className="inputText">{this.state.role}</h3>
           <h3 className="inputText">{this.state.date}</h3>
           <button id="editButton" onClick={this.editText}>
             Edit
@@ -67,18 +62,13 @@ class EduForm extends React.Component {
             <label>
               <input
                 type="text"
-                placeholder="Name Of School"
+                placeholder="Name Of Company"
                 onChange={this.changeName}
               ></input>
               <input
                 type="text"
-                placeholder="Degree Achieved"
-                onChange={this.changeDegree}
-              ></input>
-              <input
-                type="text"
-                placeholder="Major"
-                onChange={this.changeMajor}
+                placeholder="Role"
+                onChange={this.changeRole}
               ></input>
               <input type="date" onChange={this.changeDate}></input>
               <input type="submit" value="Submit"></input>
@@ -89,4 +79,4 @@ class EduForm extends React.Component {
     );
   }
 }
-export default EduForm;
+export default WorkForm;
