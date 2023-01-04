@@ -4,22 +4,20 @@ import EduInfo from './components/education';
 import Work from './components/work';
 import './CSS/App.css';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="display">
-          <div className="general">
-            <GeneralInfo />
-          </div>
-          <div className="EduAndWork">
-            <EduInfo />
-            <Work />
-          </div>
+const App = () => {
+  return (
+    <div className="App">
+      <div className="display">
+        <div className="general">
+          <GeneralInfo />
+        </div>
+        <div className="EduAndWork">
+          <EduInfo />
+          <Work />
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;
