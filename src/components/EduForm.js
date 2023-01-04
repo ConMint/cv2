@@ -72,7 +72,7 @@ class EduForm extends React.Component {
               ></input>
               <input
                 type="text"
-                placeholder="Degree Achieved"
+                placeholder="Degree Achjjieved"
                 onChange={this.changeDegree}
               ></input>
               <input
